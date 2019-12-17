@@ -10,12 +10,18 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import VueVideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
+import 'videojs-flash'
+
 import '@/icons' // icon
 import '@/permission' // permission control
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 
 Vue.use(ElementUI, { locale })
+
+Vue.use(VueVideoPlayer)
 
 Vue.config.productionTip = false
 
